@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Сервис комментариев со спам-фильтром</title>
+  </head>
+  <body>
+    <h1>Сервис комментариев со спам-фильтром</h1>
+    <div id="main">
+      <div id="form">
+        <form id="form-comment">
+          <legend class="text">Оставьте Ваш комментарий</legend>
+          <div id="nameChange">
+            <span class="text">Показывать Ваше имя?</span>
+            <div id="showName">
+              <input type="checkbox" id="checkboxYes" value="showName" />
+              <label>Yes</label>
+            </div>
+            <div id="anonymous">
+              <input type="checkbox" id="checkboxNo" value="Anonymous" />
+              <label>No</label>
+            </div>
+          </div>
+          <input
+            id="typeName"
+            type="text"
+            placeholder="Введите Ваше имя"
+            value=""
+          />
+          <input
+            id="typeLink"
+            type="text"
+            placeholder="Введите ссылку Вашего аватара"
+            value=""
+          />
+          <legend class="text">Оставьте комментарий</legend>
+          <textarea id="commentEnter"></textarea>
+          <input
+            id="send"
+            type="submit"
+            value="Отправить"
+            onclick="createInfoBlock()"
+          />
+        </form>
+        <div id="form-chat">
+          <legend class="text">Чат</legend>
+          <div id="chat">
+            <p id="paragraf" value></p>
+            <img id="img" src alt />
+            <div id="comment"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script2.js"></script>
+  </body>
+</html>
