@@ -8,12 +8,28 @@ checkboxNo.addEventListener('change', function(evt) {
   }
 })
 
-
 let typeLink = document.getElementById("typeLink");
 let commentEnter = document.getElementById("commentEnter");
+commentEnter.addEventListener('change', function(evt) {
+
+    
+    let userDate = new Date;
+    
+    let year = userDate.getFullYear();
+    let month = userDate.getMonth()+1;
+    let day = userDate.getDate();
+    let hours = userDate.getHours();
+    let minutes = userDate.getMinutes();
+    let seconds = userDate.getSeconds();
+
+    let userTime = `${day}/${month}/${year} at ${hours}:${minutes}:${seconds}`;
+    date.textContent=userTime;
+
+});
 
 
 let paragraf = document.getElementById("paragraf");
+let date = document.getElementById('date');
 let img = document.getElementById("img");
 let comment = document.getElementById("comment");
 
@@ -26,11 +42,6 @@ send.onclick = function createInfoBlock(evt) {
     paragraf.textContent = newName2;
 
     img.src = typeLink.value;
-
-    let date = new Date(); //.toString;
-    let userDate = `${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
-    console.log(userDate.toString());
-
 
   let newStr1 = commentEnter.value.replace(/(xxx|viagra)/gi, "***");
   comment.textContent = newStr1;
