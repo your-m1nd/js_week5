@@ -10,6 +10,7 @@ checkboxNo.addEventListener('change', function(evt) {
 
 let typeLink = document.getElementById("typeLink");
 
+
 let paragraf = document.getElementById("paragraf");
 let date = document.getElementById('date');
 let img = document.getElementById("img");
@@ -18,10 +19,12 @@ let comment = document.getElementById("comment");
 
 let send = document.getElementById("send");
 send.onclick = function createInfoBlock(evt) {
-
-    let newName = typeName.value.toLowerCase();
-    let newName2 = newName[0].toUpperCase() + newName.slice(1);
-    paragraf.textContent = newName2;
+    if (checkboxYes.checked) {let newName = typeName.value.toLowerCase();
+      let newName2 = newName[0].toUpperCase() + newName.slice(1);
+      paragraf.textContent = newName2;}
+      else {
+        paragraf.textContent= "Username";
+      }
 
 
     let images = [
